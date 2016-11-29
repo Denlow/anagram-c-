@@ -12,7 +12,11 @@ namespace Anagram
         return View["index.cshtml"];
       };
       Post["/form"] = _ => {
-        return View["result.cshtml"];
+        var word1 = Request.Form["word1"];
+        var word2 = Request.Form["word2"];
+        AnagramGenerator newAnagramGenerator = new AnagramGenerator();
+        newAnagramGenerator.Compare(word1, word2);
+        return View["result.cshtml", newAnagramGenerator];
       };
     }
   }

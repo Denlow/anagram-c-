@@ -5,6 +5,7 @@ namespace Anagram.Objects
 {
   public class AnagramGenerator
   {
+  
 
   }
 }
