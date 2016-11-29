@@ -1,10 +1,7 @@
-Anagrams Generator
+pass original word into form
+pass anagram word into form
 
+sort orignal word into array
+sort anagram word into array
 
-form 1
-  userInput: spear
-  Takes UserInput and puts it into an array:
-
-form 2
-  Input words that may be anagrams: pares, parse, pears, reaps, spare
-  Takes UserInput and puts it into an array:
+compare words together
