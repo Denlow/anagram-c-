@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Anagram.Objects
 {
@@ -7,20 +8,17 @@ namespace Anagram.Objects
   {
 
     private string _wordOriginal;
-    private string _wordAnagram;
-    private List<string> _lettersList = new List<string>{};
+    private List<string> _letters = new List<string>{};
 
-    public Anagram(string wordOriginal, string wordAnagram)
+    public AnagramGenerator(string word)
     {
-      _wordOriginal = wordOriginal;
-      _wordAnagram = wordAnagram;
-      Char[] lettersArray = wordOriginal.ToLower().ToCharArray();
-      foreach (letter in lettersArray)
+      _wordOriginal = word;
+      Char[] charArray = word.ToUpper().ToCharArray();
+      foreach (char letter in charArray)
       {
-        _lettersList.Add(letter.ToString());
+        _letters.Add(letter.ToString());
       }
-      _lettersList.Sort();
+      _letters.Sort();
     }
-
   }
 }

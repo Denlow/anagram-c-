@@ -12,9 +12,8 @@ namespace Anagram
         return View["index.cshtml"];
       };
       Post["/form"] = _ => {
-        string wordOriginal = Request.Form["word-original"];
-        string wordAnagram = Request.Form["word-anagram"];
-        AnagramGenerator newAnagramGenerator = new AnagramGenerator(wordOriginal, wordAnagram);
+        AnagramGenerator newAnagramGenerator = new AnagramGenerator(Request.Form["originalWord"]);
+        return View["result.cshtml", newAnagramGenerator];
       };
     }
   }

@@ -4,4 +4,6 @@ pass anagram word into form
 sort orignal word into array
 sort anagram word into array
 
+push words into list and sort
+
 compare words together
